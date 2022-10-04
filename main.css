@@ -1,0 +1,633 @@
+@import url("http://fonts.cdnfonts.com/css/knights-quest");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  font-style: normal;
+  color: #fff;
+
+  margin: 0;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Knights Quest", sans-serif;
+  background-color: #333;
+}
+
+.wrapper {
+  min-height: 100vh;
+  background-image: url(./img/background/background-phone-min.png);
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: auto;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    background-image: url(./img/background/background-desktop-min.png);
+  }
+}
+
+h1 {
+  position: absolute;
+  top: 15%;
+  left: 7%;
+
+  color: rgb(241, 224, 179);
+  letter-spacing: 0.1em;
+  font-size: 30px;
+  text-shadow: 1px 1px 5px;
+
+  font-size: 36px;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    top: 5%;
+    left: 7%;
+    font-size: 65px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h1 {
+    top: 5%;
+    left: 7%;
+    font-size: 100px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .social-1 {
+    position: absolute;
+    top: 0.5%;
+    right: 19%;
+  }
+
+  .social-2 {
+    position: absolute;
+    top: 7%;
+    right: 12%;
+  }
+
+  .social-3 {
+    position: absolute;
+    top: 15%;
+    right: 5%;
+  }
+
+  .social_img {
+    width: 7%;
+    height: 15%;
+
+    transition-duration: 0.5s;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .social-1 {
+    position: absolute;
+    top: 2%;
+    right: 27%;
+  }
+
+  .social-2 {
+    position: absolute;
+    top: 9%;
+    right: 18%;
+  }
+
+  .social-3 {
+    position: absolute;
+    top: 13%;
+    right: 5%;
+  }
+
+  .social_img {
+    width: 8%;
+    height: 7%;
+
+    transition-duration: 0.5s;
+  }
+}
+
+.social_img:hover,
+.social_img:focus {
+  transform: rotate(-360deg);
+}
+
+.button {
+  transition-duration: 0.5s;
+}
+
+.button:hover,
+.button:focus {
+  transform: rotate(-360deg);
+}
+
+@media screen and (min-width: 768px) {
+  .toggle-1 {
+    position: absolute;
+    top: 50%;
+    left: 16%;
+
+    width: 17%;
+    height: 17%;
+
+    background-image: url(./img/modal-open-buttons/desktop/team-button-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    cursor: pointer;
+  }
+
+  .toggle-2 {
+    position: absolute;
+    top: 47%;
+    left: 37%;
+
+    width: 12%;
+    height: 12%;
+
+    background-image: url(./img/modal-open-buttons/desktop/lore-button-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    cursor: pointer;
+  }
+
+  .toggle-3 {
+    position: absolute;
+    top: 22%;
+    left: 50%;
+
+    width: 15%;
+    height: 15%;
+
+    background-image: url(./img/modal-open-buttons/desktop/faq-button-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    cursor: pointer;
+  }
+
+  .toggle-4 {
+    position: absolute;
+    top: 46%;
+    right: 15%;
+
+    width: 15%;
+    height: 15%;
+
+    background-image: url(./img/modal-open-buttons/desktop/roadmap-button-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    cursor: pointer;
+  }
+
+  .toggle-5 {
+    position: absolute;
+    bottom: 13%;
+    right: 48%;
+
+    width: 18%;
+    height: 18%;
+
+    background-image: url(./img/modal-open-buttons/desktop/about-button.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .toggle-1 {
+    position: absolute;
+    bottom: 29%;
+    left: -1%;
+
+    width: 24%;
+    height: 12%;
+
+    background-image: url(./img/modal-open-buttons/mobile/team-button-mobile.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    cursor: pointer;
+  }
+
+  .toggle-2 {
+    position: absolute;
+    bottom: 33.7%;
+    left: 28.5%;
+
+    width: 24%;
+    height: 10%;
+
+    background-image: url(./img/modal-open-buttons/mobile/lore-button-mobile.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    cursor: pointer;
+  }
+
+  .toggle-3 {
+    position: absolute;
+    bottom: 43.8%;
+    left: 50%;
+
+    width: 18%;
+    height: 10%;
+
+    background-image: url(./img/modal-open-buttons/mobile/faq-button-mobile.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    cursor: pointer;
+  }
+
+  .toggle-4 {
+    position: absolute;
+    bottom: 30.3%;
+    right: 0%;
+
+    width: 20%;
+    height: 15%;
+
+    background-image: url(./img/modal-open-buttons/mobile/roadmap-button-mobile.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    cursor: pointer;
+  }
+
+  .toggle-5 {
+    position: absolute;
+    bottom: 20%;
+    right: 48%;
+
+    width: 22%;
+    height: 10%;
+
+    background-image: url(./img/modal-open-buttons/desktop/about-button.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    cursor: pointer;
+  }
+}
+
+/* ========BACKDROP and MODAL WINDOWS======= */
+
+.backdrop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  transform: translate(0px, 0px);
+  transition: all 0.8s ease 0s;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(0px, -100%);
+}
+
+@media screen and (max-width: 767px) {
+  .modal {
+    position: absolute;
+    margin-top: 0;
+    padding-top: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/modal-backgound/modal-phone-min.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: auto;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+
+  .modal_body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 100px;
+  }
+
+  .modal_content {
+    position: relative;
+    font-size: 18px;
+  }
+
+  .team,
+  .about,
+  .roadmap {
+    padding: 0 15%;
+    text-align: center;
+  }
+
+  .modal_close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    border-radius: 50%;
+
+    background-color: transparent;
+    cursor: pointer;
+    padding: 6px 6px;
+
+    background-image: url(./img/close-buttons/modal-close-phone.png);
+    width: 10%;
+    height: 10%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: auto;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+
+    transition-duration: 0.5s;
+  }
+
+  .modal_close-btn:hover,
+  .modal_close-btn:focus {
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    position: absolute;
+    margin-top: 0;
+    padding-top: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/modal-backgound/modal-desktop-min.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: auto;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+
+  .modal_body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 250px;
+  }
+
+  .modal_content {
+    position: relative;
+    font-size: 20px;
+  }
+
+  .team,
+  .about,
+  .roadmap {
+    padding: 0 15%;
+    text-align: center;
+  }
+
+  .modal_close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 17%;
+    right: 8%;
+    border-radius: 50%;
+
+    background-color: transparent;
+    cursor: pointer;
+    padding: 6px 6px;
+
+    background-image: url(./img/close-buttons/modal-close-desktop.png);
+    width: 7%;
+    height: 10%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: auto;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+
+    transition-duration: 0.5s;
+  }
+
+  .modal_close-btn:hover,
+  .modal_close-btn:focus {
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
+/* =========SLIDES============== */
+
+@media screen and (max-width: 767px) {
+  .slider {
+    position: relative;
+    padding: 30px 60px;
+    width: 500px;
+    height: 500px;
+  }
+
+  .slider .slick-arrow {
+    position: absolute;
+    bottom: 5%;
+    margin: -30px 0px 0px 0px;
+    z-index: 10;
+    width: auto;
+    height: auto;
+
+    font-size: 48px;
+    font-weight: bold;
+
+    color: rgb(185, 103, 9);
+
+    border: none;
+
+    transition-duration: 0.5s;
+  }
+
+  .slider .slick-arrow:hover,
+  .slider .slick-arrow:focus {
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  .slider .slick-arrow.slick-prev {
+    left: 18%;
+    background: transparent;
+  }
+  .slider .slick-arrow.slick-next {
+    right: 18%;
+    background: transparent;
+  }
+
+  .slider .slick-arrow.slick-disabled {
+    opacity: 0.2;
+  }
+
+  .slider__item {
+    display: block;
+    padding: 15px 85px;
+    align-content: center;
+    justify-content: center;
+
+    width: 60%;
+
+    text-align: center;
+  }
+
+  .lore-img {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 210px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .slider {
+    position: relative;
+    padding: 30px 60px;
+    width: 500px;
+    height: 500px;
+  }
+
+  .slider .slick-arrow {
+    position: absolute;
+    bottom: 60%;
+    margin: -30px 0px 0px 0px;
+    z-index: 10;
+    width: auto;
+    height: auto;
+
+    font-size: 48px;
+    font-weight: bold;
+
+    color: rgb(185, 103, 9);
+
+    border: none;
+
+    transition-duration: 0.5s;
+  }
+
+  .slider .slick-arrow:hover,
+  .slider .slick-arrow:focus {
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  .slider .slick-arrow.slick-prev {
+    left: -20%;
+    background: transparent;
+  }
+  .slider .slick-arrow.slick-next {
+    right: -20%;
+    background: transparent;
+  }
+
+  .slider .slick-arrow.slick-disabled {
+    opacity: 0.2;
+  }
+
+  .slider__item {
+    display: block;
+    padding: 15px 15px;
+    align-content: center;
+    justify-content: center;
+
+    width: 60%;
+
+    text-align: center;
+  }
+
+  .lore-img {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* @media screen and (max-width: 479px) {
+  .modal {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+    padding: 40px;
+  } */
+/* } */
