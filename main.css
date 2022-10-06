@@ -1,4 +1,4 @@
-@import url("//fonts.cdnfonts.com/css/knights-quest?styles=41922");
+@import url("https://fonts.cdnfonts.com/css/knights-quest?styles=41922");
 
 * {
   margin: 0;
@@ -34,7 +34,7 @@ body {
 
 .wrapper {
   min-height: 100vh;
-  background-image: url(./img/background/background-phone-min.png);
+  background-image: url(./img/background/background-mobile-min.png);
 
   background-repeat: no-repeat;
   background-position: center center;
@@ -45,7 +45,19 @@ body {
   -o-background-size: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (orientation: landscape){
+  .wrapper {
+    background-image: url(./img/background/background-tablet-min.png);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023.9px) {
+  .wrapper {
+    background-image: url(./img/background/background-tablet-min.png);
+  }
+}
+
+@media screen and (min-width: 1024px) {
   .wrapper {
     background-image: url(./img/background/background-desktop-min.png);
   }
@@ -56,58 +68,37 @@ h1 {
   top: 15%;
   left: 7%;
 
-  color: rgb(241, 224, 179);
+  color: #f7dab4;
   letter-spacing: 0.1em;
   font-size: 30px;
-  text-shadow: 1px 1px 5px;
-
-  font-size: 36px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
   h1 {
-    top: 5%;
-    left: 7%;
-    font-size: 65px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 52px;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
   h1 {
-    top: 5%;
-    left: 7%;
-    font-size: 100px;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 60px;
   }
 }
 
-@media screen and (min-width: 768px) {
-  .social-1 {
-    position: absolute;
-    top: 0.5%;
-    right: 19%;
-  }
-
-  .social-2 {
-    position: absolute;
-    top: 7%;
-    right: 12%;
-  }
-
-  .social-3 {
-    position: absolute;
-    top: 15%;
-    right: 5%;
-  }
-
-  .social_img {
-    width: 7%;
-    height: 15%;
-
-    transition-duration: 0.5s;
-  }
+.social_img {
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out; /** Chrome & Safari **/
+  -moz-transition: all 0.5s ease-in-out; /** Firefox **/
+  -o-transition: all 0.5s ease-in-out; /** Opera **/
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.9px) {
   .social-1 {
     position: absolute;
     top: 2%;
@@ -125,18 +116,90 @@ h1 {
     top: 13%;
     right: 5%;
   }
+}
 
+@media (min-width: 768px) and (max-width: 1199.9px) {
+  .social-1 {
+    position: absolute;
+    top: 0.5%;
+    right: 27%;
+  }
+
+  .social-2 {
+    position: absolute;
+    top: 5%;
+    right: 17%;
+  }
+
+  .social-3 {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .social-1 {
+    position: absolute;
+    top: 0.5%;
+    right: 19%;
+  }
+
+  .social-2 {
+    position: absolute;
+    top: 7%;
+    right: 12%;
+  }
+
+  .social-3 {
+    position: absolute;
+    top: 16%;
+    right: 5%;
+  }
+}
+
+@media screen and (max-width: 480px) {
   .social_img {
-    width: 8%;
-    height: 7%;
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
 
     transition-duration: 0.5s;
   }
 }
 
+@media (min-width: 480px) and (max-width: 767.9px) {
+  .social_img {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    transition-duration: 0.5s;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199.99px) {
+  .social_img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .social_img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
 .social_img:hover,
 .social_img:focus {
-  transform: rotate(-360deg);
+  transform: translate(0, 15px);
+  -webkit-transform: translate(0, 15px); /** Chrome & Safari **/
+  -o-transform: translate(0, 15px); /** Opera **/
+  -moz-transform: translate(0, 15px); /** Firefox **/
 }
 
 .button {
@@ -145,108 +208,12 @@ h1 {
 
 .button:hover,
 .button:focus {
-  transform: rotate(-360deg);
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
-@media screen and (min-width: 768px) {
-  .toggle-1 {
-    position: absolute;
-    top: 50%;
-    left: 16%;
-
-    width: 17%;
-    height: 17%;
-
-    background-image: url(./img/modal-open-buttons/desktop/team-button-desktop.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-
-    cursor: pointer;
-  }
-
-  .toggle-2 {
-    position: absolute;
-    top: 47%;
-    left: 37%;
-
-    width: 12%;
-    height: 12%;
-
-    background-image: url(./img/modal-open-buttons/desktop/lore-button-desktop.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-
-    cursor: pointer;
-  }
-
-  .toggle-3 {
-    position: absolute;
-    top: 22%;
-    left: 50%;
-
-    width: 15%;
-    height: 15%;
-
-    background-image: url(./img/modal-open-buttons/desktop/faq-button-desktop.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-
-    cursor: pointer;
-  }
-
-  .toggle-4 {
-    position: absolute;
-    top: 46%;
-    right: 15%;
-
-    width: 15%;
-    height: 15%;
-
-    background-image: url(./img/modal-open-buttons/desktop/roadmap-button-desktop.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-
-    cursor: pointer;
-  }
-
-  .toggle-5 {
-    position: absolute;
-    bottom: 13%;
-    right: 48%;
-
-    width: 18%;
-    height: 18%;
-
-    background-image: url(./img/modal-open-buttons/desktop/about-button.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-
-    cursor: pointer;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .toggle-1 {
-    position: absolute;
-    bottom: 29%;
-    left: -1%;
-
-    width: 24%;
-    height: 12%;
-
-    background-image: url(./img/modal-open-buttons/mobile/team-button-mobile.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-
-    cursor: pointer;
-  }
-
+@media screen and (max-width: 767.9px) {
   .toggle-2 {
     position: absolute;
     bottom: 33.7%;
@@ -297,10 +264,10 @@ h1 {
 
   .toggle-5 {
     position: absolute;
-    bottom: 20%;
-    right: 48%;
+    bottom: 31%;
+    left: 0%;
 
-    width: 22%;
+    width: 25%;
     height: 10%;
 
     background-image: url(./img/modal-open-buttons/desktop/about-button.png);
@@ -312,6 +279,166 @@ h1 {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width:1023.9px) {
+  .toggle-2 {
+    position: absolute;
+    bottom: 23%;
+    left: 25%;
+
+    width: 12%;
+    height: 12%;
+
+    background-image: url(./img/modal-open-buttons/tablet/lore-tablet.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    cursor: pointer;
+  }
+
+  .toggle-3 {
+    position: absolute;
+    top: 53%;
+    left: 50%;
+
+    width: 15%;
+    height: 15%;
+
+    background-image: url(./img/modal-open-buttons/tablet/faq-tablet.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    cursor: pointer;
+  }
+
+  .toggle-4 {
+    position: absolute;
+    bottom: 20%;
+    right: 1%;
+
+    width: 15%;
+    height: 15%;
+
+    background-image: url(./img/modal-open-buttons/tablet/roadmap-tablet.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    cursor: pointer;
+  }
+
+  .toggle-5 {
+    position: absolute;
+    bottom: 13%;
+    left: 5%;
+
+    width: 18%;
+    height: 18%;
+
+    background-image: url(./img/modal-open-buttons/tablet/about-tablet.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023.99px) {
+  .toggle-2,
+  .toggle-3,
+  .toggle-4 {
+    width: 25%;
+    height: 10%;
+  }
+
+  .toggle-5 {
+    width: 22%;
+    height: 18%;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .toggle-2 {
+    position: absolute;
+    top: 47%;
+    left: 37%;
+
+    width: 12%;
+    height: 12%;
+
+    background-image: url(./img/modal-open-buttons/tablet/lore-tablet.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    cursor: pointer;
+  }
+
+  .toggle-3 {
+    position: absolute;
+    top: 22%;
+    left: 50%;
+
+    width: 13%;
+    height: 13%;
+
+    background-image: url(./img/modal-open-buttons/tablet/faq-tablet.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    cursor: pointer;
+  }
+
+  .toggle-4 {
+    position: absolute;
+    top: 46%;
+    right: 15%;
+
+    width: 15%;
+    height: 15%;
+
+    background-image: url(./img/modal-open-buttons/tablet/roadmap-tablet.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    cursor: pointer;
+  }
+
+  .toggle-5 {
+    position: absolute;
+    bottom: 32%;
+    left: 17%;
+
+    width: 18%;
+    height: 18%;
+
+    background-image: url(./img/modal-open-buttons/tablet/about-tablet.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023.99px) {
+  .toggle-2,
+  .toggle-3,
+  .toggle-4 {
+    width: 25%;
+    height: 10%;
+  }
+
+  .toggle-5 {
+    width: 22%;
+    height: 18%;
+  }
+}
+
 /* ========BACKDROP and MODAL WINDOWS======= */
 
 .backdrop {
@@ -320,7 +447,6 @@ h1 {
   height: 100vh;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.6);
   transform: translate(0px, 0px);
   transition: all 0.8s ease 0s;
 }
@@ -332,106 +458,126 @@ h1 {
   transform: translate(0px, -100%);
 }
 
-@media screen and (max-width: 767px) {
-  .modal {
-    position: absolute;
-    margin-top: 0;
-    padding-top: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    background-image: url(./img/modal-backgound/modal-phone-min.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: auto;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
+.modal {
+  position: absolute;
+  margin-top: 0;
+  padding-top: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: auto;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
 
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-  }
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
 
-  .modal_body {
-    min-height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px 100px;
-  }
+.modal_body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 100px;
+}
 
-  .modal_content {
-    position: relative;
-    font-size: 18px;
-  }
 
-  .team,
-  .about,
-  .roadmap {
-    padding: 0 15%;
-    text-align: center;
-  }
+.modal_close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
 
-  .modal_close-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 10%;
-    right: 10%;
-    border-radius: 50%;
+  border-radius: 50%;
 
-    background-color: transparent;
-    cursor: pointer;
-    padding: 6px 6px;
+  background-color: transparent;
+  cursor: pointer;
 
-    background-image: url(./img/close-buttons/modal-close-phone.png);
-    width: 10%;
-    height: 10%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: auto;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: auto;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
 
-    transition-duration: 0.5s;
-  }
+  transition-duration: 0.5s;
+}
 
-  .modal_close-btn:hover,
-  .modal_close-btn:focus {
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
+.modal_close-btn:hover,
+.modal_close-btn:focus {
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.modal_content {
+  position: relative;
+}
+
+.team,
+.about,
+.roadmap {
+  padding: 0 15%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 380px) {
+  .about {
+    font-size: 14px;
   }
 }
 
-@media screen and (min-width: 768px) {
-  .modal {
-    position: absolute;
-    margin-top: 0;
-    padding-top: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    background-image: url(./img/modal-backgound/modal-desktop-min.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: auto;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
+/* ======MODAL===MOBILE=== */
 
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
+
+
+@media screen and (max-width: 767.9px){
+  .modal {
+    background-image: url(./img/modal-backgound/modal-phone-min.png);
+  }
+
+  .modal_close-btn {
+    background-image: url(./img/close-buttons/modal-close-phone.png);
+
+    top: 11%;
+    right: 12%;
+
+    padding: 6px 6px;
+
+    width: 70px;
+    height: 70px;
+  }
+
+  @media screen and (orientation: landscape) {
+    .modal_body {
+      padding-top: 0;
+    }
+
+    .modal_close-btn {
+      width: 8%;
+    }
+  }
+}
+
+/* ======MODAL===TABLET=== */
+
+@media screen and (max-width: 380px){
+  .modal_body {
+    padding: 50px 40px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023.9px) {
+  .modal {
+    background-image: url(./img/modal-backgound/modal-tablet-min.png);
   }
 
   .modal_body {
@@ -444,7 +590,7 @@ h1 {
 
   .modal_content {
     position: relative;
-    font-size: 20px;
+    line-height: 1;
   }
 
   .team,
@@ -452,110 +598,220 @@ h1 {
   .roadmap {
     padding: 0 15%;
     text-align: center;
+    vertical-align: middle;
   }
 
   .modal_close-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 17%;
-    right: 8%;
-    border-radius: 50%;
+    background-image: url(./img/close-buttons/modal-close-tablet.png);
+    top: 11%;
+    right: 15%;
 
-    background-color: transparent;
-    cursor: pointer;
     padding: 6px 6px;
 
-    background-image: url(./img/close-buttons/modal-close-desktop.png);
-    width: 7%;
-    height: 10%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: auto;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-
-    transition-duration: 0.5s;
+    width: 85px;
+    height: 85px;
   }
 
-  .modal_close-btn:hover,
-  .modal_close-btn:focus {
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
+  @media screen and (orientation: landscape) {
+    .modal_body {
+      padding-top: 100px;
+    }
   }
 }
 
-/* =========SLIDES============== */
+/* ======================================= */
 
-@media screen and (max-width: 767px) {
-  .slider {
+
+@media screen and (min-width: 1024px) {
+  .modal {
+    background-image: url(./img/modal-backgound/modal-desktop-min.png);
+  }
+
+  .modal_close-btn {
+    top: 10%;
+    right: 10%;
+    border-radius: 50%;
+
+    padding: 6px 6px;
+
+    width: 90px;
+    height: 90px;
+
+    background-image: url(./img/close-buttons/modal-close-desktop.png);
+  }
+
+  .modal_body {
+    padding: 50px 200px;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+
+  /* .modal_body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 250px;
+  } */
+
+  .modal_content {
     position: relative;
-    padding: 30px 60px;
-    width: 500px;
-    height: 500px;
+    /* font-size: 30px; */
+    line-height: 1;
   }
 
-  .slider .slick-arrow {
-    position: absolute;
-    bottom: 5%;
-    margin: -30px 0px 0px 0px;
-    z-index: 10;
-    width: auto;
-    height: auto;
+}
 
-    font-size: 48px;
-    font-weight: bold;
+/* =========SLIDES============== ================================================================= */
 
-    color: rgb(185, 103, 9);
+/* .slick-active { animation: fade-in-move-down 1.2s; } */
 
-    border: none;
+.slider .slick-arrow {
+  position: absolute;
+  /* bottom: -10%; */
+  margin: -30px 0px 0px 0px;
+  z-index: 10;
+  width: auto;
+  height: auto;
+  font-weight: bold;
 
-    transition-duration: 0.5s;
-  }
+  color: rgb(185, 103, 9);
 
-  .slider .slick-arrow:hover,
-  .slider .slick-arrow:focus {
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
-  }
+  border: none;
 
-  .slider .slick-arrow.slick-prev {
-    left: 18%;
-    background: transparent;
-  }
-  .slider .slick-arrow.slick-next {
-    right: 18%;
-    background: transparent;
-  }
+  transition-duration: 0.5s;
 
-  .slider .slick-arrow.slick-disabled {
-    opacity: 0.2;
-  }
+  background: transparent;
+}
 
+.slider .slick-arrow:hover,
+.slider .slick-arrow:focus {
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+
+  cursor: pointer;
+}
+
+.slider .slick-arrow.slick-disabled {
+  opacity: 0.1;
+}
+
+
+@media screen and (max-width: 388.9px) {
   .slider__item {
     display: block;
-    padding: 15px 85px;
+    padding: 0vw 100px;
     align-content: center;
     justify-content: center;
 
     width: 60%;
-
+    font-size: 3.9vw;
     text-align: center;
-  }
-
-  .lore-img {
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 210px;
-    height: auto;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 390px) and (max-width: 479.9px) {
+  .slider__item {
+    font-size: 3.2vw;
+  }
+}
+
+@media screen and (max-width: 479.9px) {
+  .slider__item {
+    display: block;
+    padding: 0vw 100px;
+    align-content: center;
+    justify-content: center;
+
+    width: 60%;
+    text-align: center;
+  }
+
+  .slider {
+    position: relative;
+    padding: 30px 60px;
+    width: 500px;
+    height: auto;
+  }
+
+  .slider .slick-arrow {
+    bottom: 0;
+
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .slider .slick-arrow.slick-prev {
+    left: 35%;
+    background: transparent;
+  }
+  .slider .slick-arrow.slick-next {
+    right: 35%;
+    background: transparent;
+  }
+
+  /* @media screen and (orientation: landscape) {
+    .slider__item {
+      padding: 0 0;
+      font-size: 14px;
+    }
+  } */
+
+}
+
+@media (min-width: 480px) and (max-width: 767.9px) {
+  .slider__item {
+    display: block;
+    padding: 0px 70px;
+    align-content: center;
+    justify-content: center;
+
+    width: 60%;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .slider {
+    position: relative;
+    padding: 30px 60px;
+    width: 500px;
+    height: auto;
+  }
+
+  .slider .slick-arrow {
+    bottom: 0;
+
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .slider .slick-arrow.slick-prev {
+    left: 35%;
+  }
+  .slider .slick-arrow.slick-next {
+    right: 35%
+  }
+
+  .about {
+    font-size: 3vw;
+  }
+
+  @media screen and (orientation: landscape) {
+    .slider__item {
+      padding: 0 0;
+      font-size: 14px;
+    }
+
+    .about {
+      padding-top: 50px;
+      font-size: 18px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023.9px) {
   .slider {
     position: relative;
     padding: 30px 60px;
@@ -563,41 +819,62 @@ h1 {
     height: 500px;
   }
 
-  .slider .slick-arrow {
-    position: absolute;
-    bottom: 60%;
-    margin: -30px 0px 0px 0px;
-    z-index: 10;
-    width: auto;
-    height: auto;
+  .slider__item {
+    display: block;
+    padding: 0px 70px;
+    align-content: center;
+    justify-content: center;
 
-    font-size: 48px;
-    font-weight: bold;
-
-    color: rgb(185, 103, 9);
-
-    border: none;
-
-    transition-duration: 0.5s;
+    width: 60%;
+    font-size: 22px;
+    text-align: center;
   }
 
-  .slider .slick-arrow:hover,
-  .slider .slick-arrow:focus {
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
+  .slider .slick-arrow {
+    bottom: -5%;
+
+    font-size: 36px;
+    font-weight: bold;
   }
 
   .slider .slick-arrow.slick-prev {
-    left: -20%;
-    background: transparent;
+    left: 25%;
   }
   .slider .slick-arrow.slick-next {
-    right: -20%;
-    background: transparent;
+    right: 25%;
   }
 
-  .slider .slick-arrow.slick-disabled {
-    opacity: 0.2;
+  .about {
+    font-size: 28px;
+  }
+
+  @media screen and (orientation: landscape) {
+    .slider__item {
+      padding: 3% 0;
+      font-size: 16px;
+    }
+
+    .slider .slick-arrow {
+      bottom: 30%;
+  
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    .about {
+      padding-top: 90px;
+      font-size: 18px;
+    }
+
+  }
+}
+
+@media screen and (min-width: 1024px) {
+    .slider {                                                                                                                        
+    position: relative;
+    padding: 30px 60px;
+    width: 500px;
+    height: 500px;
   }
 
   .slider__item {
@@ -611,23 +888,34 @@ h1 {
     text-align: center;
   }
 
-  .lore-img {
-    margin-top: 20px;
-    max-width: 100%;
-    height: auto;
+  .slider__item {
+    display: block;
+    padding: 40px 0 0 0;
+    align-content: center;
+    justify-content: center;
+
+    width: 60%;
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .slider .slick-arrow {
+    bottom: -3%;
+
+    font-size: 36px;
+    font-weight: bold;
+  }
+
+  .slider .slick-arrow.slick-prev {
+    left: 25%;
+  }
+  .slider .slick-arrow.slick-next {
+    right: 25%;
+  }
+
+  .about {
+    font-size: 28px;
   }
 }
 
-/* @media screen and (max-width: 479px) {
-  .modal {
-    width: 100%;
-  }
-}
 
-@media screen and (min-width: 1200px) {
-  .modal {
-    width: 528px;
-    height: 581px;
-    padding: 40px;
-  } */
-/* } */
