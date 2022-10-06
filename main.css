@@ -33,6 +33,7 @@ body {
 }
 
 .wrapper {
+  position: relative;
   min-height: 100vh;
   background-image: url(./img/background/background-mobile-min.png);
 
@@ -459,8 +460,7 @@ h1 {
 }
 
 .modal {
-  /* position: absolute; */
-  position: fixed;
+  position: absolute;
   margin-top: 0;
   padding-top: 0;
   top: 50%;
