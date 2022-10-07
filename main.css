@@ -551,6 +551,8 @@ h1 {
   .about {
     font-size: 14px;
   }
+
+
 }
 
 /* ======MODAL===MOBILE=== */
@@ -565,13 +567,16 @@ h1 {
   .modal_close-btn {
     background-image: url(./img/close-buttons/modal-close-phone.png);
 
+    width: 30px;
+    height: 30px;
+
     top: 11%;
     right: 12%;
 
-    padding: 6px 6px;
+    /* padding: 6px 6px; */
 
-    width: 70px;
-    height: 70px;
+    /* width: 70px;
+    height: 70px; */
   }
 
   @media screen and (orientation: landscape) {
