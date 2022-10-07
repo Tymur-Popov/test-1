@@ -567,8 +567,8 @@ h1 {
   .modal_close-btn {
     background-image: url(./img/close-buttons/modal-close-phone.png);
 
-    width: 30px;
-    height: 30px;
+    width: 100px;
+    height: 100px;
 
     top: 11%;
     right: 12%;
